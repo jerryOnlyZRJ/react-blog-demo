@@ -5,7 +5,7 @@
 
 ## 项目说明
 
-在进行本阶段项目之前，我们首先需要在我们的 `my-react-blog-backend` 后端服务配置我们的邮箱，这样我们的留言邮件才会正确送达你的邮箱里：
+在进行本阶段项目之前，我们首先需要在我们的 [my-react-blog-backend](http://git.imweb.io/reactlearn/my-react-blog-backend) 后端服务配置我们的邮箱，这样我们的留言邮件才会正确送达你的邮箱里：
 
 配置邮箱需要在 `my-react-blog-backend` 的 `config.js` 中配置相应的 mail 字段。
 
