@@ -32,11 +32,12 @@ export default class FeedbackForm extends React.Component{
     submitFeedback(){
         console.log(this.state.form);
 
-        // if(!this.state.)
         if(Object.keys(this.state.form).filter((key) => !this.state.form[key]).length !== 0){
             alert('请完善所有内容');
             return;
         }
+
+        // TODO: 应该在这里加上对博客字段的判断，主要目的为过滤无效内容，防止攻击注入等。
 
         axios.post(preURL + '/mail', {
            info: this.state.form
@@ -72,45 +73,35 @@ export default class FeedbackForm extends React.Component{
                 </div>
 
                 <div className={'form-item'}>
-
                     <label htmlFor="name">昵称：</label>
                     <input id={'name'} autoComplete="off" value={this.state.form.nickname} onChange={e => {this.setForm({
                         nickname: e.target.value
                     })}}/>
-
                 </div>
 
                 <div className={'form-item'}>
-
                     <label htmlFor="mail">邮箱：</label>
                     <input id={'mail'} autoComplete="off" value={this.state.form.mail} onChange={e => {this.setForm({
                         mail: e.target.value
                     })}}/>
-
                 </div>
 
                 <div className={'form-item'}>
-
                     <label htmlFor="title">标题：</label>
                     <input id={'title'} autoComplete="off" value={this.state.form.title} onChange={e => {this.setForm({
                         title: e.target.value
                     })}}/>
-
                 </div>
 
                 <div className={'form-item'}>
-
                     <label htmlFor="detail">详情：</label>
                     <textarea id={'detail'} autoComplete="off" value={this.state.form.detail} onChange={e => {this.setForm({
                         detail: e.target.value
                     })}}/>
-
                 </div>
 
                 <div className={'form-item'}>
-
                     <button onClick={() => {this.submitFeedback()}}>提交留言</button>
-
                 </div>
 
             </div>
