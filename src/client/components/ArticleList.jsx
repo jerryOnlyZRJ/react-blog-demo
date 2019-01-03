@@ -17,7 +17,7 @@ export default class ArticleList extends React.Component {
 
     componentDidMount() {
         axios.get(`${preURL}/list`).then((response) => {
-            console.log('list:', response.data);
+            // console.log('list:', response.data);
             response.data && response.data.sort((a, b) => {
                 return (new Date(b.date) - new Date(a.date))
             })
