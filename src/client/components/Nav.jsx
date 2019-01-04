@@ -15,11 +15,11 @@ export default class Nav extends React.Component{
             <div className="nav" id="nav">
                 <div className="avatar-name">
                     <div className="avatar">
-                        <img src={require('../resource/avatar.jpg')} />
+                        <img src={require('../resource/avatar.webp')} />
                     </div>
                     <div className="name">
                         <i>
-                            iconie
+                            Jerry
                         </i>
                     </div>
                 </div>
