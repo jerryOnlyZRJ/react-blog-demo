@@ -1,6 +1,6 @@
 import React from 'react'
-import ClassNames from 'classnames'
 import './Nav.less'
+import {publicURL} from "../config";
 
 export default class Nav extends React.Component{
     constructor(props){
@@ -15,18 +15,18 @@ export default class Nav extends React.Component{
             <div className="nav" id="nav">
                 <div className="avatar-name">
                     <div className="avatar">
-                        <img src={require('../resource/avatar.webp')} />
+                        <img src={require('../resource/avatar.jpg')} />
                     </div>
                     <div className="name">
                         <i>
-                            Jerry
+                            iconie
                         </i>
                     </div>
                 </div>
                 <div className="contents" id="nav-content">
                     <ul>
                         <li>
-                            <a>
+                            <a href={publicURL}>
                                 <i className="iconfont icon-shouye1"></i>
                                 <span>首页</span>
                             </a>
@@ -47,6 +47,12 @@ export default class Nav extends React.Component{
                             <a>
                                 <i className="iconfont icon-guanyu1"></i>
                                 <span>关于</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href={publicURL + '/feedback.html'}>
+                                <i className="iconfont icon-guanyu1"></i>
+                                <span>反馈</span>
                             </a>
                         </li>
                     </ul>

@@ -1,8 +1,7 @@
 import React from 'react'
 import Layout from '../../container/layout/Layout'
-import ArticleContent from '../../components/ArticleContent'
-
-import './Article.less'
+import FeedbackForm from '../../components/FeedbackForm'
+import './Feedback.less'
 
 export default class Article extends React.Component{
     constructor(props){
@@ -15,7 +14,7 @@ export default class Article extends React.Component{
     render(){
         return(
             <Layout>
-                <ArticleContent />
+                <FeedbackForm />
             </Layout>
         )
     }

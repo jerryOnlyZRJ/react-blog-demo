@@ -68,11 +68,11 @@ export default class ArticleList extends React.Component {
                 </div>
 
                 <ul className={'pager'} >
-                    <li className={ClassNames("previous", { 'hidden': this.state.begin === 0 })} onClick={() => { this.lastPage() }}>
+                    <li className={ClassNames("previous",{'hidden': this.state.begin === 0})} onClick={() => {this.lastPage()}}>
                         <a>&larr; Newer Posts</a>
                     </li>
 
-                    <li className={ClassNames("next", { 'hidden': this.state.begin + this.state.pageSize >= this.state.list.length })} onClick={() => { this.nextPage() }}>
+                    <li  className={ClassNames("next",{'hidden': this.state.begin + this.state.pageSize >= this.state.list.length })}  onClick={() => {this.nextPage()}}>
                         <a>Older Posts &rarr;</a>
                     </li>
                 </ul>
