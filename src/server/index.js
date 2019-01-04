@@ -52,6 +52,6 @@ app
     .use(router.routes())
     .use(router.allowedMethods());
 
-console.log('Begin Listening...');
-
-app.listen(config.port);
+app.listen(config.port, () => {
+console.log(`Begin Listening at port ${config.port} ...`);
+});
